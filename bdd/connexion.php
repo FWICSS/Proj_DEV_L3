@@ -16,3 +16,10 @@ function connect()
 }
 
 $connexion = connect();
+
+/*
+    MEMO base en ligne
+    user : u790235881_dimitri
+    nom base : u790235881_miage_projet
+    mdp : Miage@971.
+*/
