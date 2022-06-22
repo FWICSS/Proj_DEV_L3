@@ -27,4 +27,6 @@ $connexion = connect();
     nom base : u790235881_miage_projet
     mdp : Miage@971.
     Server : sql655.main-hosting.eu
+    https://auth-db655.hostinger.fr/?_ga=2.123164813.729824639.1655921070-1260001690.1655921070
+    212.1.211.1
 */
