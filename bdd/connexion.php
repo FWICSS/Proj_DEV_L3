@@ -22,4 +22,5 @@ $connexion = connect();
     user : u790235881_dimitri
     nom base : u790235881_miage_projet
     mdp : Miage@971.
+    Server : sql655.main-hosting.eu
 */
