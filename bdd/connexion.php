@@ -1,8 +1,8 @@
 <?php
-define('DB_NAME', 'miage_projet');
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+define('DB_NAME', 'u790235881_miage_projet');
+define('DB_SERVER', 'sql655.main-hosting.eu');
+define('DB_USER', 'u790235881_dimitri');
+define('DB_PASSWORD', 'Miage@971.');
 
 function connect()
 {
