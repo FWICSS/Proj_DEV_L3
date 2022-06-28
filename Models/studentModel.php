@@ -9,9 +9,9 @@ function createNewStudent($nom, $prenom, $login, $password)
     $count = $stmt->execute();
     return $count;
 }
-fuction verifemail($login){
+function emailExist($login){
     global $database;
-    $query="SELECT * from etudiant" WHERE (login=$login);
+    $query="SELECT * from etudiant WHERE (login='$login')";
     $stmt = $database->prepare($query);
     $count = $stmt->execute();
     return $count;

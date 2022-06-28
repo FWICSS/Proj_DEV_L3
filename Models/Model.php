@@ -7,7 +7,6 @@ define('DB_PASSWORD', '');
 function connect()
 {
     try {
-
         $connexion = new PDO("mysql:host=" . DB_SERVER . ";dbname=" . DB_NAME, DB_USER, DB_PASSWORD);
         $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $connexion;
