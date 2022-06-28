@@ -4,6 +4,11 @@ if (isset($_REQUEST['action'])) {
     $action = $_REQUEST['action'];
     switch ($action) {
         case 'register':
+        $verifemail = verifemail($_REQUEST['mail'];);
+        if($verifemail != null){
+            $message = "Un compte existe déja";
+            }
+
             if($_REQUEST["password"] === $_REQUEST["passwordRepeat"]){
                 if ((preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$#', $_REQUEST["password"]))
                     || (preg_match('#^(?=.*[a-z])(?=.*[0-9])(?=.*\W).{8,}$#', $_REQUEST["password"]))
