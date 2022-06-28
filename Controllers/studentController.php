@@ -1,4 +1,4 @@
-<?php
+a<?php
 require_once('Models\studentModel.php');
 if (isset($_REQUEST['action'])) {
     $action = $_REQUEST['action'];
