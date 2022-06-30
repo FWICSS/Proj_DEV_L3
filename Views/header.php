@@ -16,8 +16,9 @@
                 <a class="navbar-brand" href="index.php">
                     <img src="assert/logo.png" alt="miage-antilles" width="100" height="50">
                 </a>
+
                 <form class="d-flex">
-                    <button class="btn btn-outline-success" type="submit">Espace enseignants</button>
+                    <?php if(isset($_SESSION['idStudent'])){include ('Views\logOutBtn.php');} ?>
                 </form>
             </div>
         </nav>
