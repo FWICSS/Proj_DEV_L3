@@ -1,3 +1,6 @@
+<?php
+include_once('header.php');
+?>
 <form>
 <div class="form-row">
     <div class="col-md-4 mb-3">
@@ -60,3 +63,6 @@
 </div>
 
 </form>
+<?php
+include('footer.php');
+?>

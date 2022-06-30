@@ -8,6 +8,7 @@
 <script src="js/bootstrap.bundle.js"></script>
 <script src="js/bootstrap.js"></script>
 <link href="styles/styles.css" rel="stylesheet">
+<link rel="icon" href="assets/world.png"/>
 <main class="main">
     <header>
         <nav class="navbar navbar-light bg-light">
@@ -16,7 +17,7 @@
                     <img src="assert/logo.png" alt="miage-antilles" width="100" height="50">
                 </a>
                 <form class="d-flex">
-                        <?php if(isset($_SESSION['idStudent'])){include ('Views\logOutBtn.php');} ?>
+                    <button class="btn btn-outline-success" type="submit">Espace enseignants</button>
                 </form>
             </div>
         </nav>
