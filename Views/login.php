@@ -9,7 +9,7 @@ include_once('header.php');
                         <h4 class="card-title mt-3 text-center">Connexion</h4>
                         <form method="POST" action="index.php?useCase=student&action=logIn">
                             <div class="form-group input-group mb-3">
-                                <input name="login" class="form-control" placeholder="Mail" type="email" required>
+                                <input name="login" class="form-control" placeholder="login" type="text" required>
                             </div>
                             <div class="form-group input-group mb-3">
                                 <input name="password" class="form-control" placeholder="Mot de passe" type="password"
