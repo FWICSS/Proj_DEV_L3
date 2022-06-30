@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f41a7608-4ce9-4033-b202-cd5ce52e5685" name="Changes" comment="registerMiageForm1" />
+    <list default="true" id="f41a7608-4ce9-4033-b202-cd5ce52e5685" name="Changes" comment="registerMiageForm1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/registerMiageForm1.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registerMiageForm1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/registerficheavisbtsdut.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registerficheavisbtsdut.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +47,7 @@
       <workItem from="1655925721562" duration="760000" />
       <workItem from="1656080955488" duration="6215000" />
       <workItem from="1656587695040" duration="387000" />
-      <workItem from="1656588739906" duration="17211000" />
+      <workItem from="1656588739906" duration="17622000" />
     </task>
     <task id="LOCAL-00001" summary="fonction verfie mail">
       <created>1656423074189</created>
@@ -87,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656619112796</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="registerMiageForm1">
+      <created>1656619274958</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656619274958</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
