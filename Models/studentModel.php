@@ -32,13 +32,14 @@ function getLogInInfosStudent($login, $password)
     $query = "SELECT etudiant.id, etudiant.nom, etudiant.prenom FROM etudiant WHERE etudiant.login='$login' and etudiant.password='$password'";
     $req = $database->prepare($query);
     $req->execute();
-    $ligne = $req->fetchall();
+    $ligne = $req->fetch();
     return $ligne;
 }
 
-/**  function connect($id,$nom,$prenom){
-    session_start();
+function logIn($id, $nom, $prenom)
+{
     $_SESSION['idStudent'] = $id;
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
-}*/
+}
+

@@ -27,7 +27,6 @@ if (isset($_REQUEST['action'])) {
                             include_once('Views\sucessesMessages.php');
                         }
                         include_once('Views\login.php');
-
                     } else {
                         $message = "Votre mdp doit contenir au moins 8 caractères et au moins 3 des 4 catégories de caractères (majuscules, minuscules, chiffres, caractères spéciaux)!";
                         include_once('Views\errorsMessages.php');
@@ -48,12 +47,12 @@ if (isset($_REQUEST['action'])) {
                 if ($student == null) {
                     $message = "Login ou mot de passe incorrect";
                     include('Views\errorsMessages.php');
-                    include_once('Views\homepage.php');
+                    include_once('Views\login.php');
                 } else {
-                    //$id = $student['id'];
-                    //$nom = $student[0]->nom;
-                    //$prenom = $student[0]->prenom;
-                    //connect($id, $nom, $prenom);
+                    $id = $student['id'];
+                    $nom = $student['nom'];
+                    $prenom = $student['prenom'];
+                    logIn($id,$nom,$prenom);
                     include('Views\registerMiageForm.php');
                 }
                 break;
