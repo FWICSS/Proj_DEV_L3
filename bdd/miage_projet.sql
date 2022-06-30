@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 22 juin 2022 à 18:06
+-- Généré le :  mar. 28 juin 2022 à 17:36
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -30,13 +30,13 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `VILLE` longtext,
   `CODEPOSTALE` int(11) DEFAULT NULL,
   `MAIL` longtext,
-  `TEL` int(11) DEFAULT NULL,
+  `TEL` text,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -121,15 +121,17 @@ CREATE TABLE IF NOT EXISTS `entreprise` (
 
 DROP TABLE IF EXISTS `etudiant`;
 CREATE TABLE IF NOT EXISTS `etudiant` (
-  `ID` int(11) NOT NULL,
-  `ADR_ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ADR_ID` int(11) DEFAULT NULL,
   `NOM` longtext,
   `PRENOM` text,
+  `LOGIN` varchar(50) NOT NULL,
+  `PASSWORD` varchar(50) NOT NULL,
   `NOM_JEUNE_FILLE` text,
   `DDN` date DEFAULT NULL,
   PRIMARY KEY (`ID`),
-  KEY `FK_RESIDER` (`ADR_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+    CONSTRAINT FK_adresseId FOREIGN KEY (`ADR_ID`) REFERENCES adresse (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
