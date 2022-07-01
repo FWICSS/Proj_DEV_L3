@@ -1,92 +1,113 @@
 <?php
 include_once('header.php');
 ?>
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center d-flex-row text-center">
-            <div class="col-12 col-lg-4 h-50 ">
-                <!--col-md-9 offset-md-4-->
-                <div class="card shadow">
-                    <div class="card-body mx-auto">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group mb-3">
-                                    <label >Prenom</label>
-                                    <input type="text" class="form-control is-valid" name="First name" placeholder="Prenom" value="exemple" required>
-                                    <div class="valid-feedback">
-                                        semble correct
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label >Nom</label>
-                                    <input type="text" class="form-control is-valid" name="Last name" placeholder="Nom" value="Otto" required>
-                                    <div class="valid-feedback">
-                                        semble correct
-                                    </div>
-                                </div>
+    <div class="container bg-white rounded-3 border border-5 shadow mt-5 ps-lg-5 pe-lg-5 pb-5">
+        <div class="py-5 text-center">
+            <h2>Fiche de renseignements</h2>
+        </div>
 
-                                <div class="form-group mb-3">
-                                    <label >login</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                                        </div>
-                                        <input type="text" class="form-control is-invalid" name="login" placeholder="Login" aria-describedby="inputGroupPrepend3" value="login" required>
-                                        <div class="invalid-feedback">
-                                            Votre login
+        <form>
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-sm-3">
+                    <label for="firstName" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group mb-3">
-                                    <label >Adresse complete</label>
-                                    <input type="text" class="form-control is-invalid" name="adresse" placeholder="City" required>
-                                    <div class="invalid-feedback">
-                                        Donnez une adresse valide
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label >adresse complette des parents</label>
-                                    <input type="text" class="form-control is-invalid" name="pays" placeholder="State" required>
-                                    <div class="invalid-feedback">
-                                        Donnez une adresse complette des parentsvalide
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label >ville</label>
-                                    <input type="text" class="form-control is-invalid" name="pays" placeholder="State" required>
-                                    <div class="invalid-feedback">
-                                        Donnez une ville valide
-                                    </div>
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label >commune</label>
-                                    <input type="text" class="form-control is-invalid" name="pays" placeholder="State" required>
-                                    <div class="invalid-feedback">
-                                        Donnez une commune valide
-                                    </div>
-                                </div>
+                <div class="col-sm-3">
+                    <label for="lastName" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
 
-                            </div>
-                            <div class="form-group mb-3">
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
-                                    <label class="form-check-label" for="invalidCheck3">
-                                        Agree to terms and conditions
-                                    </label>
-                                    <div class="invalid-feedback">
-                                        You must agree before submitting.
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary" type="submit">Submit form</button>
-                        </form>
+                <div class="col-sm-3">
+                    <label for="username" class="form-label">Nom de jeune fille</label>
+                    <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="username" placeholder="Optionnel" required>
+                        <div class="invalid-feedback">
+                            Your username is required.
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row g-3 d-flex justify-content-center mb-3">
+                <div class="col-sm-3">
+                    <label for="username" class="form-label">Date de naissance</label>
+                    <div class="input-group has-validation">
+                        <input type="date" class="form-control" id="username"
+                               placeholder="date de naissance" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <label for="username" class="form-label">Lieu de naissance</label>
+                    <div class="input-group has-validation">
+                        <input type="text" class="form-control" id="username"
+                               placeholder="Lieu de naissance" required>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-5 pb-2 text-start">
+                <h4>Adresse de l'étudiant</h4>
+            </div>
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Libellé Adresse</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-2">
+                    <label for="firstName" class="form-label">Code postale</label>
+                    <input type="number" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Tel</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Portable</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                           required>
+                </div>
+            </div>
+            <div class="pt-5 pb-2 text-start">
+                <h4>Adresse des parents</h4>
+            </div>
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Libellé adresse</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Ville</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-2">
+                    <label for="firstName" class="form-label">Code postale</label>
+                    <input type="number" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+                <div class="col-sm-4">
+                    <label for="firstName" class="form-label">Tel</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                </div>
+            </div>
+        </form>
+        <div class="col-md-12 text-end">
+            <button class="btn btn-primary" type="submit">Suivant</button>
         </div>
-    </div>
-<?php
-include('footer.php');
-?>
+    </div>  
