@@ -5,6 +5,7 @@ if (isset($_REQUEST['action'])) {
     switch ($action) {
         case 'register':
             $emailExist = emailExist($_REQUEST['mail']);
+
             if ($emailExist != 0) {
                 $message = "Un compte existe déja avec cet e-mail";
                 include_once('Views\errorsMessages.php');
