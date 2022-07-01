@@ -11,7 +11,7 @@ include_once('header.php');
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                    <img src="profile.png" alt=""/>
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                         <input type="file" name="file"/>
@@ -21,7 +21,10 @@ include_once('header.php');
             <div class="col-md-6">
                 <div class="profile-head">
                     <h5>
-                        Kshiti Ghelani
+                        <?php if(isset($_SESSION['idStudent'])){
+                            echo($_SESSION['nom']);
+                            echo(' ');
+                            echo($_SESSION['prenom']); } ?>
                     </h5>
                     <h6>
                         Web Developer and Designer

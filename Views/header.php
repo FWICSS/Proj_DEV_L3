@@ -9,7 +9,6 @@
 <script src="js/bootstrap.js"></script>
 <link href="styles/styles.css" rel="stylesheet">
 <link rel="icon" href="assets/world.png"/>
-<main class="main">
     <header>
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
@@ -27,6 +26,10 @@
             </div>
         </nav>
     </header>
+
+
+
+<body>
 
 
 
