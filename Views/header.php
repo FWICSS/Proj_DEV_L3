@@ -16,7 +16,11 @@
                 <a class="navbar-brand" href="index.php">
                     <img src="assert/logo.png" alt="miage-antilles" width="100" height="50">
                 </a>
-
+                    <?php if(isset($_SESSION['idStudent'])){
+                    echo('Bonjour, ');
+                    echo($_SESSION['nom']);
+                    echo(' ');
+                    echo($_SESSION['prenom']); } ?>
                 <form class="d-flex">
                     <?php if(isset($_SESSION['idStudent'])){include ('Views\logOutBtn.php');} ?>
                 </form>
