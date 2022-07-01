@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="Ajout deconnexion" />
+    <list default="true" id="c11c2a68-3b8b-4764-ad86-0e1714905243" name="Changes" comment="remplir pdf">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap_design/footers/footers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap_design/footers/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap_design/headers/headers.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap_design/headers/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap_design/sign-in/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap_design/sign-in/signin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/footer.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,124 +25,90 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Controllers/studentController.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Models/studentModel.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/Acomptepage.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/errorsMessages.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/footer.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/header.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/homepage.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/login.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Views/registerMiageForm.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2AtFkynSS35KxVHfPg4Ax6PAby5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2Awfq24G1t3k03uHO18CUHT3lat" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/GeoWorld-master&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.phpOptions&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/UwAmp/www",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dimit\PhpstormProjects\Proj_DEV_L3\pdf" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\L3_PROJET\bdd" />
-      <recent name="C:\wamp64\www\L3_PROJET\Models" />
+      <recent name="C:\Users\dimit\PhpstormProjects\Proj_DEV_L3\pdf" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="" />
-      <created>1655821122053</created>
+      <changelist id="c11c2a68-3b8b-4764-ad86-0e1714905243" name="Changes" comment="" />
+      <created>1655925757179</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655821122053</updated>
-      <workItem from="1655821124839" duration="68000" />
-      <workItem from="1655821252515" duration="278000" />
-      <workItem from="1655821670140" duration="2966000" />
-      <workItem from="1655861077318" duration="8378000" />
-      <workItem from="1655952678112" duration="601000" />
-      <workItem from="1655981964238" duration="25363000" />
-      <workItem from="1656073587006" duration="994000" />
-      <workItem from="1656331852839" duration="20920000" />
-      <workItem from="1656416383412" duration="16156000" />
-      <workItem from="1656506920793" duration="14516000" />
-      <workItem from="1656586953872" duration="12989000" />
-      <workItem from="1656600498900" duration="3769000" />
-      <workItem from="1656613844783" duration="479000" />
-      <workItem from="1656614333677" duration="4750000" />
+      <updated>1655925757179</updated>
+      <workItem from="1655925757970" duration="664000" />
+      <workItem from="1655926465264" duration="1308000" />
+      <workItem from="1655993590170" duration="300000" />
+      <workItem from="1656420390652" duration="1874000" />
+      <workItem from="1656427642137" duration="214000" />
+      <workItem from="1656430094735" duration="73000" />
+      <workItem from="1656430295524" duration="575000" />
+      <workItem from="1656591729383" duration="2322000" />
+      <workItem from="1656616121654" duration="7225000" />
+      <workItem from="1656697683998" duration="304000" />
+      <workItem from="1656697992206" duration="1102000" />
     </task>
-    <task id="LOCAL-00001" summary="First Commit with New Bdd &amp; Connexion">
-      <created>1655921251489</created>
+    <task id="LOCAL-00001" summary="remplir pdf">
+      <created>1656430143369</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1655921251489</updated>
+      <updated>1656430143369</updated>
     </task>
-    <task id="LOCAL-00002" summary="Interfaces : création compte, connexion&#10;Fonction: Ajout étudiant&#10;Alert succès &amp; erreurs">
-      <created>1656351717708</created>
+    <task id="LOCAL-00002" summary="remplir pdf">
+      <created>1656430870375</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1656351717708</updated>
+      <updated>1656430870375</updated>
     </task>
-    <task id="LOCAL-00003" summary="Fonction pour vérifier l'email">
-      <created>1656424144734</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1656424144734</updated>
-    </task>
-    <task id="LOCAL-00004" summary="new bdd">
-      <created>1656593170645</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1656593170645</updated>
-    </task>
-    <task id="LOCAL-00005" summary="connexion">
-      <created>1656594047875</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1656594047875</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Ajout deconnexion">
-      <created>1656619727371</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1656619727371</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,12 +126,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First Commit with New Bdd &amp; Connexion" />
-    <MESSAGE value="Interfaces : création compte, connexion&#10;Fonction: Ajout étudiant&#10;Alert succès &amp; erreurs" />
-    <MESSAGE value="Fonction pour vérifier l'email" />
-    <MESSAGE value="new bdd" />
-    <MESSAGE value="connexion" />
-    <MESSAGE value="Ajout deconnexion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout deconnexion" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="remplir pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="remplir pdf" />
   </component>
 </project>
