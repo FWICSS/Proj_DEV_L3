@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 04 juil. 2022 à 13:33
+-- Généré le :  lun. 04 juil. 2022 à 19:21
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -38,7 +38,16 @@ CREATE TABLE IF NOT EXISTS `adresse` (
   `TEL` text,
   `PORTABLE` text,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `adresse`
+--
+
+INSERT INTO `adresse` (`ID`, `LIBELLE_ADRESSE`, `VILLE`, `CODEPOSTAL`, `MAIL`, `TEL`, `PORTABLE`) VALUES
+(1, 'LES MANGLES', 'PETIT-CANAL', 97131, 'aymeric.mrico@gmail.com', '0590123456', '0690217977'),
+(2, 'LES MANGLES', 'PETIT-CANAL', 97131, 'test.test@orange.fr', '0590227651', NULL),
+(3, 'AllÃ©e barolin laventure, Les mangles', 'PETIT-CANAL', 97131, 'bardu.aymeric@gmail.com', '0590227651', NULL);
 
 -- --------------------------------------------------------
 
@@ -71,35 +80,31 @@ CREATE TABLE IF NOT EXISTS `avoir_contact` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `candidater`
---
-
-DROP TABLE IF EXISTS `candidater`;
-CREATE TABLE IF NOT EXISTS `candidater` (
-  `ETUDIANT_ID` int(11) NOT NULL,
-  `FORMATION_ID` int(11) NOT NULL,
-  `DATE` date DEFAULT NULL,
-  PRIMARY KEY (`ETUDIANT_ID`,`FORMATION_ID`),
-  KEY `FK_CANDIDATER2` (`FORMATION_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `diplome`
 --
 
 DROP TABLE IF EXISTS `diplome`;
 CREATE TABLE IF NOT EXISTS `diplome` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_ETUDIANT` int(11) NOT NULL,
   `SERIE` longtext,
   `INTITULE` longtext,
   `MENTION` varchar(1024) DEFAULT NULL,
   `ANNEE` int(11) DEFAULT NULL,
   `LIEU` longtext,
   `MOYENNE` decimal(10,0) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`ID`),
+  KEY `fk_constraint_diplome_etudiant` (`ID_ETUDIANT`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `diplome`
+--
+
+INSERT INTO `diplome` (`ID`, `ID_ETUDIANT`, `SERIE`, `INTITULE`, `MENTION`, `ANNEE`, `LIEU`, `MOYENNE`) VALUES
+(1, 1, 'Scientifique', NULL, 'Null', 2018, 'LycÃ©e Faustin FlÃ©ret', NULL),
+(2, 1, 'Scientifique', NULL, 'B', 2018, 'LycÃ©e Faustin FlÃ©ret', NULL),
+(3, 1, 'Scientifique', NULL, 'B', 2018, 'LycÃ©e Faustin FlÃ©ret', NULL);
 
 -- --------------------------------------------------------
 
@@ -134,7 +139,14 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   `LIEU_DDN` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `FK_adresseId` (`ADR_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `etudiant`
+--
+
+INSERT INTO `etudiant` (`ID`, `ADR_ID`, `NOM`, `PRENOM`, `LOGIN`, `PASSWORD`, `NOM_JEUNE_FILLE`, `DDN`, `LIEU_DDN`) VALUES
+(1, 1, 'BARDU', 'Aymeric', 'bardu.aymeric', 'test971@', '', '2022-07-21', 'Moule');
 
 -- --------------------------------------------------------
 
@@ -145,8 +157,11 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
 DROP TABLE IF EXISTS `formation`;
 CREATE TABLE IF NOT EXISTS `formation` (
   `ID` int(11) NOT NULL,
+  `ID_ETUDIANT` int(11) NOT NULL,
   `INTITULE` longtext,
-  PRIMARY KEY (`ID`)
+  `DATE` date DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `fk_constraint_formation_etudiant` (`ID_ETUDIANT`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -161,7 +176,15 @@ CREATE TABLE IF NOT EXISTS `parent` (
   `ADR_ID` int(11) NOT NULL,
   PRIMARY KEY (`ID`),
   KEY `FK_HABITER` (`ADR_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `parent`
+--
+
+INSERT INTO `parent` (`ID`, `ADR_ID`) VALUES
+(1, 2),
+(2, 3);
 
 -- --------------------------------------------------------
 
@@ -171,13 +194,15 @@ CREATE TABLE IF NOT EXISTS `parent` (
 
 DROP TABLE IF EXISTS `piece_jointe`;
 CREATE TABLE IF NOT EXISTS `piece_jointe` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_ETUDIANT` int(11) NOT NULL,
   `NUMERO` int(11) DEFAULT NULL,
   `NOM` longtext,
   `TAILLE` int(11) DEFAULT NULL,
   `TYPE` longtext,
   `BIN` longblob,
-  KEY `FK_RATTACHER` (`ID`)
+  PRIMARY KEY (`ID`),
+  KEY `fk_constraint_piece_jointe_etudiant` (`ID_ETUDIANT`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -192,20 +217,6 @@ CREATE TABLE IF NOT EXISTS `porter_sur` (
   `THEME_ID` int(11) NOT NULL,
   PRIMARY KEY (`STAGE_ID`,`THEME_ID`),
   KEY `FK_PORTER_SUR2` (`THEME_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `posseder`
---
-
-DROP TABLE IF EXISTS `posseder`;
-CREATE TABLE IF NOT EXISTS `posseder` (
-  `ETUDIANT_ID` int(11) NOT NULL,
-  `DIPLOME_ID` int(11) NOT NULL,
-  PRIMARY KEY (`ETUDIANT_ID`,`DIPLOME_ID`),
-  KEY `FK_POSSEDER2` (`DIPLOME_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
