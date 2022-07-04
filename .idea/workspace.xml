@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="Formulaires">
+    <list default="true" id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="profilepage.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/studentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/studentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/registerMiageForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registerMiageForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/registerMiageForm1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/registerMiageForm3.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/registerMiageForm3.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdd/miage_projet.sql" beforeDir="false" afterPath="$PROJECT_DIR$/bdd/miage_projet.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdf/remplir_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdf/remplir_pdf.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +51,10 @@
     </include_path>
   </component>
   <component name="ProjectId" id="2AtFkynSS35KxVHfPg4Ax6PAby5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,6 +63,7 @@
   &quot;keyToString&quot;: {
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/GeoWorld-master&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
