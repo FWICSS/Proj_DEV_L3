@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 04 juil. 2022 à 13:22
+-- Généré le :  lun. 04 juil. 2022 à 13:33
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `candidater` (
 
 DROP TABLE IF EXISTS `diplome`;
 CREATE TABLE IF NOT EXISTS `diplome` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `SERIE` longtext,
   `INTITULE` longtext,
   `MENTION` varchar(1024) DEFAULT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `diplome` (
 
 DROP TABLE IF EXISTS `entreprise`;
 CREATE TABLE IF NOT EXISTS `entreprise` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `NOM` longtext,
   `PROPOSITION_FERME` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`ID`)
@@ -216,7 +216,7 @@ CREATE TABLE IF NOT EXISTS `posseder` (
 
 DROP TABLE IF EXISTS `stage`;
 CREATE TABLE IF NOT EXISTS `stage` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ENT_ID` int(11) NOT NULL,
   `ETU_ID` int(11) NOT NULL,
   `ANNEE` int(11) DEFAULT NULL,
@@ -233,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `stage` (
 
 DROP TABLE IF EXISTS `theme`;
 CREATE TABLE IF NOT EXISTS `theme` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `LIBELLE` text,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
