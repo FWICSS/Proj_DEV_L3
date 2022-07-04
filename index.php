@@ -18,11 +18,15 @@ if (isset($_REQUEST['useCase'])) {
             unset($_SESSION['nom']);
             unset($_SESSION['prenom']);
             include('Views\login.php');
+            break;
+        case 'parent':
+            include ('Controllers\parentController.php');
+            break;
     }
 } else {
-    if (isset($_SESSION['idStudent'])){
-        include ('Views/registerMiageForm.php');
-    }else{
+    if (isset($_SESSION['idStudent'])) {
+        include('Views/registerMiageForm.php');
+    } else {
         include('Views/homepage.php');
     }
 }

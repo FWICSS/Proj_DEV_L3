@@ -5,7 +5,7 @@ include_once('header.php');
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center d-flex-row text-center">
             <div class="col-12 col-lg-4 h-50 ">
-                <div class="card shadow">
+                <div class="card shadow border border-5">
                     <div class="card-body mx-auto">
                         <h4 class="card-title mt-3 text-center">Connexion</h4>
                         <form method="POST" action="index.php?useCase=student&action=logIn">
@@ -25,5 +25,5 @@ include_once('header.php');
             </div>
         </div>
     </div>
-<?php include('footer.php');
+
 

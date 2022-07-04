@@ -53,12 +53,25 @@ if (isset($_REQUEST['action'])) {
                     $id = $student['id'];
                     $nom = $student['nom'];
                     $prenom = $student['prenom'];
-                    logIn($id,$nom,$prenom);
+                    $mail = $student['mail'];
+                    logIn($id, $nom, $prenom, $mail);
                     include('Views\registerMiageForm.php');
                 }
-                break;
             }
+            break;
+        case 'firstForm':
+            $maidenName = $_REQUEST['maidenName'];
+            $dateOfBirth = $_REQUEST['dateOfBirth'];
+            $placeOfBirth = $_REQUEST['placeOfBirth'];
+            updateStudentInfos($maidenName, $dateOfBirth, $placeOfBirth);
+
+            $lblAddress = $_REQUEST['lblAddress'];
+            $lblCity = $_REQUEST['lblCity'];
+            $lblCodePostal = $_REQUEST['lblCodePostal'];
+            $tel = $_REQUEST['tel'];
+            $phone = $_REQUEST['phone'];
+            updateAddressStudentInfos($lblAddress, $lblCity, $lblCodePostal, $tel, $phone);
+            include('Views\registerMiageForm2.php');
+            break;
     }
-
-
 }

@@ -29,17 +29,56 @@ function addEmail($mail)
 function getLogInInfosStudent($login, $password)
 {
     global $database;
-    $query = "SELECT etudiant.id, etudiant.nom, etudiant.prenom FROM etudiant WHERE etudiant.login='$login' and etudiant.password='$password'";
+    $query = "SELECT etudiant.id, etudiant.nom, etudiant.prenom, adresse.mail as mail FROM etudiant INNER JOIN adresse ON etudiant.adr_id = adresse.id WHERE etudiant.login='$login' AND etudiant.password='$password'";
     $req = $database->prepare($query);
     $req->execute();
     $ligne = $req->fetch();
     return $ligne;
 }
 
-function logIn($id, $nom, $prenom)
+function logIn($id, $nom, $prenom, $mail)
 {
     $_SESSION['idStudent'] = $id;
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
+    $_SESSION['mail'] = $mail;
 }
+
+function updateStudentInfos($maidenName, $dateOfBirth, $placeOfBirth)
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "UPDATE etudiant SET nom_jeune_fille='$maidenName',ddn='$dateOfBirth',lieu_ddn='$placeOfBirth' WHERE id ='$id'";
+    $res = $database->query($query);
+    $count = $res->execute();
+    return $count;
+}
+
+function getIdAdressByStudent()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT adr_id FROM etudiant WHERE id='$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
+
+function updateAddressStudentInfos($lblAddress, $lblCity, $lblCodePostal, $tel, $phone)
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $res = getIdAdressByStudent($id);
+    $idAdress = $res['adr_id'];
+    $query = "UPDATE adresse SET libelle_adresse='$lblAddress', ville='$lblCity',codepostal='$lblCodePostal',tel='$tel',portable='$phone' WHERE adresse.id = $idAdress";
+    $res = $database->query($query);
+    $count = $res->execute();
+    return $count;
+}
+
+
+
+
+
+
 
