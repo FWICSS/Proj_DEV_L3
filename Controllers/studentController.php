@@ -73,5 +73,17 @@ if (isset($_REQUEST['action'])) {
             updateAddressStudentInfos($lblAddress, $lblCity, $lblCodePostal, $tel, $phone);
             include('Views\registerMiageForm2.php');
             break;
+
+        case 'form_3':
+            if (isset($_REQUEST['serie'], $_REQUEST['mention'],$_REQUEST['year'],$_REQUEST['place'])){
+                $idStudent = $_SESSION['idStudent'];
+                $serie = $_REQUEST['serie'];
+                $mention =  $_REQUEST['mention'];
+                $year = $_REQUEST['year'];
+                $place = $_REQUEST['place'];
+                insertBacDiplome($idStudent,$serie, $mention, $year, $place);
+                include ('Views\registerMiageForm4.php');
+            }
+            break;
     }
 }

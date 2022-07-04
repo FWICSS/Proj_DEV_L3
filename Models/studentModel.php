@@ -75,6 +75,26 @@ function updateAddressStudentInfos($lblAddress, $lblCity, $lblCodePostal, $tel, 
     $count = $res->execute();
     return $count;
 }
+
+function insertBacDiplome($idStudent,$serie, $mention, $year, $place)
+{
+    global $database;
+    $query = "INSERT INTO diplome(id_etudiant,serie,mention,annee,lieu) VALUES (:id_etudiant,:serie,:mention,:annee,:place)";
+    $stmt = $database->prepare($query);
+    $stmt->bindParam(':id_etudiant', $idStudent);
+    $stmt->bindParam(':serie', $serie);
+    $stmt->bindParam(':mention', $mention);
+    $stmt->bindParam(':annee', $year);
+    $stmt->bindParam(':place', $place);
+    $count = $stmt->execute();
+    return $count;
+}
+
+function linkStudentWithDiplome($id)
+{
+
+}
+
 function SelectAllAdresse()
 {
     global $database;

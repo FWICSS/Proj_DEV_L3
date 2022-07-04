@@ -1,11 +1,16 @@
 <?php
 include_once('header.php');
 ?>
-<div class="container bg-white rounded-3 border border-5 shadow mt-5 ps-lg-5 pe-lg-5 pb-5">
+<div class="container">
+    <div class="progress">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
+    </div>
+</div>
+
+<div class="container bg-white rounded-3 border border-5 shadow mt-3 ps-lg-5 pe-lg-5 pb-5">
     <div class="py-5 text-center">
         <h2>Fiche de renseignements</h2>
     </div>
-
     <form method="POST" action="index.php?useCase=student&action=firstForm">
         <div class="row g-3 d-flex justify-content-center">
             <div class="col-sm-3">
@@ -68,7 +73,7 @@ include_once('header.php');
                 <input type="text" class="form-control" name="phone" required>
             </div>
         </div>
-        <div class="col-md-12 text-end">
+        <div class="col-md-12 text-end mt-3">
             <button class="btn btn-primary" type="submit">Suivant</button>
         </div>
     </form>
