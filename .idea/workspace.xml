@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="debut fonction pdf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf/Candidature.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/pdf/Candidature.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/studentModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/studentModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdf/remplir_pdf.php" beforeDir="false" afterPath="$PROJECT_DIR$/pdf/remplir_pdf.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656944005400</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="debut fonction pdf">
+      <created>1656945582581</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1656945582581</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

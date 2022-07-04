@@ -1,7 +1,6 @@
 <?php
 require('fpdm.php');
-global $database;
-$id = $_SESSION['idStudent'];
+$Address_E = SelectAllAdresse();
 //Tableau contenant les paramètres à passer au PDF
 $fields = array(
     'Current_année' => date('Y') ,
@@ -11,12 +10,12 @@ $fields = array(
     'Nom_jeune_fille' => $_SESSION['nom'],
     'Date_naissance' => $_SESSION['nom'],
     'Lieu_naissance' => $_SESSION['nom'],
-    'Adresse_etudiant' => $_SESSION['nom'],
-    'Ville_E' => $_SESSION[''],
-    'Code_Postal_E' => $_SESSION['nom'],
-    'Email_E' => $_SESSION['nom'],
-    'Telephone_E' => $_SESSION['nom'],
-    'Mobile_E' => $_SESSION['nom'],
+    'Adresse_etudiant' => $Address_E['libelle_adresse'],
+    'Ville_E' => $Address_E['Ville'],
+    'Code_Postal_E' => $Address_E['CODEPOSTAL'],
+    'Email_E' => $Address_E['mail'],
+    'Telephone_E' => $Address_E['tel'],
+    'Mobile_E' => $Address_E['portable'],
     'Adresse_parents' => $_SESSION['nom'],
     'Ville_P' => $_SESSION['nom'],
     'Code_Postal_P' => $_SESSION['nom'],

@@ -75,6 +75,15 @@ function updateAddressStudentInfos($lblAddress, $lblCity, $lblCodePostal, $tel, 
     $count = $res->execute();
     return $count;
 }
+function SelectAllAdresse()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT * FROM adress WHERE id='$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
 
 
 
