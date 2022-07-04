@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 28 juin 2022 à 17:36
+-- Généré le :  lun. 04 juil. 2022 à 13:22
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -31,12 +31,14 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `adresse`;
 CREATE TABLE IF NOT EXISTS `adresse` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LIBELLE_ADRESSE` varchar(255) DEFAULT NULL,
   `VILLE` longtext,
-  `CODEPOSTALE` int(11) DEFAULT NULL,
+  `CODEPOSTAL` int(11) DEFAULT NULL,
   `MAIL` longtext,
   `TEL` text,
+  `PORTABLE` text,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -129,9 +131,10 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   `PASSWORD` varchar(50) NOT NULL,
   `NOM_JEUNE_FILLE` text,
   `DDN` date DEFAULT NULL,
+  `LIEU_DDN` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID`),
-    CONSTRAINT FK_adresseId FOREIGN KEY (`ADR_ID`) REFERENCES adresse (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  KEY `FK_adresseId` (`ADR_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -154,11 +157,8 @@ CREATE TABLE IF NOT EXISTS `formation` (
 
 DROP TABLE IF EXISTS `parent`;
 CREATE TABLE IF NOT EXISTS `parent` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `ADR_ID` int(11) NOT NULL,
-  `NOM` longtext,
-  `PRENOM` text,
-  `DDN` date DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `FK_HABITER` (`ADR_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
