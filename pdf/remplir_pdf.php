@@ -1,26 +1,28 @@
 <?php
 require('fpdm.php');
-$Address_E = SelectAllAdresse();
+require_once('Models\studentModel.php');
+$Etudiant = SelectEtudiant();
+$Parents = SelectParent();
 //Tableau contenant les paramètres à passer au PDF
 $fields = array(
     'Current_année' => date('Y') ,
     'next_année' => date('Y')+1,
-    'Nom' =>  $_SESSION['nom'] ,
-    'Prénom' => $_SESSION['prenom'],
-    'Nom_jeune_fille' => $_SESSION['nom'],
-    'Date_naissance' => $_SESSION['nom'],
-    'Lieu_naissance' => $_SESSION['nom'],
-    'Adresse_etudiant' => $Address_E['libelle_adresse'],
-    'Ville_E' => $Address_E['Ville'],
-    'Code_Postal_E' => $Address_E['CODEPOSTAL'],
-    'Email_E' => $Address_E['mail'],
-    'Telephone_E' => $Address_E['tel'],
-    'Mobile_E' => $Address_E['portable'],
-    'Adresse_parents' => $_SESSION['nom'],
-    'Ville_P' => $_SESSION['nom'],
-    'Code_Postal_P' => $_SESSION['nom'],
-    'Email_P' => $_SESSION['nom'],
-    'Telephone_P' => $_SESSION['nom'],
+    'Nom' =>  $Etudiant['nom'] ,
+    'Prénom' => $Etudiant['prenom'],
+    'Nom_jeune_fille' => $Etudiant['nom_jeune_fille'],
+    'Date_naissance' => $Etudiant['ddn'],
+    'Lieu_naissance' => $Etudiant['lieu_ddn'],
+    'Adresse_etudiant' => $Etudiant['libelle_adresse'],
+    'Ville_E' => $Etudiant['Ville'],
+    'Code_Postal_E' => $Etudiant['codepostal'],
+    'Email_E' => $Etudiant['mail'],
+    'Telephone_E' => $Etudiant['tel'],
+    'Mobile_E' => $Etudiant['portable'],
+    'Adresse_parents' => $Parents['nom'],
+    'Ville_P' => $Parents['nom'],
+    'Code_Postal_P' => $Parents['nom'],
+    'Email_P' => $Parents['nom'],
+    'Telephone_P' => $Parents['nom'],
 );
 
 //Le paramètre correspond au chemin vers le formulaire PDF

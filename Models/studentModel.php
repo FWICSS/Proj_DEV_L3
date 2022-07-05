@@ -95,15 +95,6 @@ function linkStudentWithDiplome($id)
 
 }
 
-function SelectAllAdresse()
-{
-    global $database;
-    $id = $_SESSION['idStudent'];
-    $query = "SELECT * FROM adress WHERE id='$id'";
-    $res = $database->query($query);
-    $count = $res->fetch();
-    return $count;
-}
 
 function insertCycle($idStudent,$intitule,$annee_obtention,$place,$average){
     global $database;
@@ -117,6 +108,26 @@ function insertCycle($idStudent,$intitule,$annee_obtention,$place,$average){
     $count = $stmt->execute();
     return $count;
 }
+function SelectParent()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT * FROM adresse INNER JOIN parent ON adresse.ID=parent.ADR_ID INNER JOIN avoir ON parent.ID = avoir.PARENT_ID WHERE avoir.ETUDIANT_ID ='$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
+
+function SelectEtudiant()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT * FROM adresse INNER JOIN etudiant ON adresse.ID = etudiant.ADR_ID WHERE etudiant.id = '$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
+
 
 
 
