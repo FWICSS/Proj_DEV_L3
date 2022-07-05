@@ -105,6 +105,18 @@ function SelectAllAdresse()
     return $count;
 }
 
+function insertCycle($idStudent,$intitule,$annee_obtention,$place,$average){
+    global $database;
+    $query = "INSERT INTO diplome(id_etudiant,intitule,annee,lieu,moyenne) VALUES (:id_etudiant,:intitule,:annee,:place,:average)";
+    $stmt = $database->prepare($query);
+    $stmt->bindParam(':id_etudiant', $idStudent);
+    $stmt->bindParam(':intitule', $intitule);
+    $stmt->bindParam(':annee', $annee_obtention);
+    $stmt->bindParam(':place', $place);
+    $stmt->bindParam(':average', $average);
+    $count = $stmt->execute();
+    return $count;
+}
 
 
 

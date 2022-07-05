@@ -5,7 +5,6 @@ if (isset($_REQUEST['action'])) {
     switch ($action) {
         case 'register':
             $emailExist = emailExist($_REQUEST['mail']);
-
             if ($emailExist != 0) {
                 $message = "Un compte existe déja avec cet e-mail";
                 include_once('Views\errorsMessages.php');
@@ -34,7 +33,7 @@ if (isset($_REQUEST['action'])) {
                         include_once('Views\homepage.php');
                     }
                 } else {
-                    $message = " Les mots de passes ne correspondent pas";
+                    $message = "Les mots de passes ne correspondent pas";
                     include_once('Views\errorsMessages.php');
                     include_once('Views\homepage.php');
                 }
@@ -73,17 +72,41 @@ if (isset($_REQUEST['action'])) {
             updateAddressStudentInfos($lblAddress, $lblCity, $lblCodePostal, $tel, $phone);
             include('Views\registerMiageForm2.php');
             break;
-
         case 'form_3':
-            if (isset($_REQUEST['serie'], $_REQUEST['mention'],$_REQUEST['year'],$_REQUEST['place'])){
+            if (isset($_REQUEST['serie'], $_REQUEST['mention'], $_REQUEST['year'], $_REQUEST['place'])) {
                 $idStudent = $_SESSION['idStudent'];
                 $serie = $_REQUEST['serie'];
-                $mention =  $_REQUEST['mention'];
+                $mention = $_REQUEST['mention'];
                 $year = $_REQUEST['year'];
                 $place = $_REQUEST['place'];
-                insertBacDiplome($idStudent,$serie, $mention, $year, $place);
-                include ('Views\registerMiageForm4.php');
+                insertBacDiplome($idStudent, $serie, $mention, $year, $place);
+                include('Views\registerMiageForm4.php');
             }
+            break;
+        case 'form_4':
+            // Récupération des champs du formulaire n°4
+            $intitule_1 = $_REQUEST['intitule_1'];
+            $intitule_2 = $_REQUEST['intitule_2'];
+            $intitule_3 = $_REQUEST['intitule_3'];
+
+            $annee_obtention_1 = $_REQUEST['annee_obtention_1'];
+            $annee_obtention_2 = $_REQUEST['annee_obtention_2'];
+            $annee_obtention_3 = $_REQUEST['annee_obtention_3'];
+
+            $place_1 = $_REQUEST['place_1'];
+            $place_2 = $_REQUEST['place_2'];
+            $place_3 = $_REQUEST['place_3'];
+
+            $average_1 = $_REQUEST['average_1'];
+            $average_2 = $_REQUEST['average_2'];
+            $average_3 = $_REQUEST['average_3'];
+
+            $idStudent = $_SESSION['idStudent'];
+
+            insertCycle($idStudent, $intitule_1, $annee_obtention_1, $place_1, $average_1);
+            insertCycle($idStudent, $intitule_2, $annee_obtention_2, $place_2, $average_2);
+            insertCycle($idStudent, $intitule_3, $annee_obtention_3, $place_3, $average_3);
+            include('Views\registerMiageForm5.php');
             break;
     }
 }

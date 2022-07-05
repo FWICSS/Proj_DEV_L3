@@ -6,7 +6,7 @@ include_once('header.php');
             <div class="col-12 col-lg-4 h-50 ">
                 <div class="card shadow border border-5">
                     <div class="card-body mx-auto">
-                        <h4 class="card-title mt-3 text-center">Créer votre compte </h4>
+                        <h4 class="card-title mt-3 text-center">Créez votre compte </h4>
                         <form method="POST" action="index.php?useCase=student&action=register">
                             <div class="form-group input-group mb-3">
                                 <input name="lastName" class="form-control" placeholder="Nom" type="text" required>
