@@ -19,7 +19,7 @@ if (isset($_REQUEST['action'])) {
                         $firstName = $_REQUEST['firstName'];
                         $login = strtolower($lastName) . '.' . strtolower($firstName);
                         $mail = $_REQUEST['mail'];
-                        $password = $_REQUEST['password'];
+                        $password = password_hash($_REQUEST['password'],PASSWORD_DEFAULT);
                         addEmail($mail);
                         $count = createNewStudent($lastName, $firstName, $login, $password, $mail);
                         if ($count === true) {
@@ -43,7 +43,7 @@ if (isset($_REQUEST['action'])) {
             if (isset($_REQUEST['login'], $_REQUEST['password'])) {
                 $login = $_REQUEST['login'];
                 $password = $_REQUEST['password'];
-                $student = getLogInInfosStudent($login, $password);
+                $student = getLogInInfosStudent($login, password_hash($password,PASSWORD_DEFAULT));
                 if ($student == null) {
                     $message = "Login ou mot de passe incorrect";
                     include('Views\errorsMessages.php');
