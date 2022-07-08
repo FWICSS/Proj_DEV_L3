@@ -11,25 +11,20 @@ include_once('header.php');
     <div class="container">
         <p>Le nombre de candidature à la formation L3 MIAGE est de <b> <?php if (isset($_SESSION['idAdmin'])){
             $nbetudiant = getNBEtudiant();
+            $listeEtudiant = getListeEtudiant();
             echo $nbetudiant['NBEtudiant'];
             }?> candidatures.</b></p>
+
         <h2>Sélectionner un étudiant : </h2>
 
-        <select  class="form-select" aria-label="Default select example" id="etudiant" onchange="">
-            <?php
-                $listeEtudiant = getListeEtudiant();
-                $x = 0;
-                while($x <= 2){
-                        {
-                         echo "<option value='" . $listeEtudiant['nom'] . "'>" . $listeEtudiant['prenom'] . "
-                         </option>";
-                        }
-                }
-                ?>
+        <?php
+        echo '<select class="form-select" aria-label="Default select example">';
+            echo  '<option selected>Sélectionnez un étudiant</option>';
+            foreach($listeEtudiant as $a)
+            echo '<option value="'.$a["id"].'">'.$a["nom"].' '.$a["prenom"].'</option>';
+            echo '</select>';
             ?>
-        </select>
 
     </div>
-
 
 </div>

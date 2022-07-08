@@ -27,3 +27,13 @@ function getNBEtudiant()
     $count = $stmt->fetch();
     return $count;
 }
+
+function getListeEtudiant()
+{
+    global $database;
+    $query = "SELECT Distinct id, nom , prenom FROM etudiant";
+    $req = $database->prepare($query);
+    $req->execute();
+    $ligne = $req->fetchAll();
+    return $ligne;
+}
