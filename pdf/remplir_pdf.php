@@ -18,11 +18,11 @@ $fields = array(
     'Email_E' => $Etudiant['mail'],
     'Telephone_E' => $Etudiant['tel'],
     'Mobile_E' => $Etudiant['portable'],
-    'Adresse_parents' => $Parents['nom'],
-    'Ville_P' => $Parents['nom'],
-    'Code_Postal_P' => $Parents['nom'],
-    'Email_P' => $Parents['nom'],
-    'Telephone_P' => $Parents['nom'],
+    'Adresse_parents' => $Parents['libelle_adresse'],
+    'Ville_P' => $Parents['Ville'],
+    'Code_Postal_P' => $Parents['codepostal'],
+    'Email_P' => $Parents['mail'],
+    'Telephone_P' => $Parents['tel'],''
 );
 
 //Le paramètre correspond au chemin vers le formulaire PDF
