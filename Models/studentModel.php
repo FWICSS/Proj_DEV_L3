@@ -108,7 +108,8 @@ function SelectParent()
 {
     global $database;
     $id = $_SESSION['idStudent'];
-    $query = "SELECT * FROM adresse INNER JOIN parent ON adresse.ID=parent.ADR_ID INNER JOIN avoir ON parent.ID = avoir.PARENT_ID WHERE avoir.ETUDIANT_ID ='$id'";
+    $query = "SELECT * FROM adresse INNER JOIN parent ON adresse.ID=parent.ADR_ID INNER JOIN etudiant 
+    ON etudiant.parent_ID = parent.ID WHERE etudiant.id ='$id'";
     $res = $database->query($query);
     $count = $res->fetch();
     return $count;
@@ -129,7 +130,7 @@ function SelectDiplome_E()
     global $database;
     $id = $_SESSION['idStudent'];
     $query = "SELECT SERIE,INTITULE,MENTION,ANNEE,LIEU,MOYENNE 
-    FROM diplome INNER JOIN etudiant ON diplome.id_etudiant = etudiant.id WHERE etudiant.id '$id'";
+    FROM diplome INNER JOIN etudiant ON diplome.id_etudiant = etudiant.id WHERE etudiant.id='$id'";
     $res = $database->query($query);
     $count = $res->fetch();
     return $count;
@@ -147,7 +148,9 @@ function Stage_Entreprise()
 {
     global $database;
     $id = $_SESSION['idStudent'];
-    $query = "SELECT NOM,PROPOSITION_FERME,ANNEE,LIBELLE FROM theme INNER JOIN porter_sur ON porter_sur.theme_id = theme.id INNER JOIN stage ON porter_sur.stage_id = stage.id  INNER JOIN entreprise ON stage.ent_id = entreprise.id WHERE etu_id='$id'";
+    $query = "SELECT NOM,PROPOSITION_FERME,ANNEE,LIBELLE FROM theme INNER JOIN porter_sur 
+    ON porter_sur.theme_id = theme.id INNER JOIN stage ON porter_sur.stage_id = stage.id  INNER JOIN entreprise 
+        ON stage.ent_id = entreprise.id WHERE etu_id='$id'";
     $res = $database->query($query);
     $count = $res->fetch();
     return $count;

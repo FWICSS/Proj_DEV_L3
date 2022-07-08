@@ -107,6 +107,7 @@ if (isset($_REQUEST['action'])) {
             insertCycle($idStudent, $intitule_1, $annee_obtention_1, $place_1, $average_1);
             insertCycle($idStudent, $intitule_2, $annee_obtention_2, $place_2, $average_2);
             insertCycle($idStudent, $intitule_3, $annee_obtention_3, $place_3, $average_3);
+
             include('Views\questionnaire.php');
             break;
     }

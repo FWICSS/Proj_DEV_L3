@@ -1,6 +1,5 @@
 <?php
 require_once('Models\adminModel.php');
-
 if (isset($_REQUEST['action'])) {
     $action = $_REQUEST['action'];
     switch ($action) {
