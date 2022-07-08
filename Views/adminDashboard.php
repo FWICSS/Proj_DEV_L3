@@ -14,20 +14,20 @@ include_once('header.php');
             echo $nbetudiant['NBEtudiant'];
             }?> candidatures.</b></p>
         <h2>Sélectionner un étudiant : </h2>
-        <select  class="form-select" aria-label="Default select example" id="etudiant" onchange="">
-        <?php
-        $listeEtudiant = getListeEtudiant();
-        $x = 0;
-        while($x <= 2){
-                {
-                    echo "<option value='" . $listeEtudiant['nom'] . "'>" . $listeEtudiant['prenom'] . "
-                 </option>";
-                }
-        }
-        ?>
-        ?>
 
-    </select>
+        <select  class="form-select" aria-label="Default select example" id="etudiant" onchange="">
+            <?php
+                $listeEtudiant = getListeEtudiant();
+                $x = 0;
+                while($x <= 2){
+                        {
+                         echo "<option value='" . $listeEtudiant['nom'] . "'>" . $listeEtudiant['prenom'] . "
+                         </option>";
+                        }
+                }
+                ?>
+            ?>
+        </select>
 
     </div>
 

@@ -22,6 +22,10 @@ if (isset($_REQUEST['useCase'])) {
         case 'parent':
             include ('Controllers\parentController.php');
             break;
+        case 'admin':
+            include ('Controllers\adminController.php');
+            break;
+
     }
 } else {
     if (isset($_SESSION['idStudent'])) {
@@ -30,4 +34,3 @@ if (isset($_REQUEST['useCase'])) {
         include('Views/homepage.php');
     }
 }
-
