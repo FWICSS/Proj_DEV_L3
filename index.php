@@ -14,16 +14,24 @@ if (isset($_REQUEST['useCase'])) {
             break;
         case 'logOut':
             session_destroy();
-            unset($_SESSION['idStudent']);
-            unset($_SESSION['nom']);
-            unset($_SESSION['prenom']);
-            include('Views\login.php');
+            if (isset($_SESSION['idAdmin'])) {
+                unset($_SESSION['idAdmin']);
+                unset($_SESSION['nom']);
+                unset($_SESSION['prenom']);
+                include('Views\adminLogin.php');
+
+            }else if(isset($_SESSION['idStudent'])) {
+                unset($_SESSION['idStudent']);
+                unset($_SESSION['nom']);
+                unset($_SESSION['prenom']);
+               include('Views\login.php');
+            }
             break;
         case 'parent':
-            include ('Controllers\parentController.php');
+            include('Controllers\parentController.php');
             break;
         case 'admin':
-            include ('Controllers\adminController.php');
+            include('Controllers\adminController.php');
             break;
 
     }

@@ -3,7 +3,8 @@ include_once('header.php');
 ?>
 <div class="container">
     <div class="progress">
-        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 20%"></div>
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
+             aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">25%</div>
     </div>
 </div>
 
@@ -15,11 +16,12 @@ include_once('header.php');
         <div class="row g-3 d-flex justify-content-center">
             <div class="col-sm-3">
                 <label for="firstName" class="form-label">Prénom</label>
-                <input type="text" class="form-control " name="firstName" value=<?php echo $_SESSION['prenom']?> disabled>
+                <input type="text" class="form-control " name="firstName"
+                       value=<?php echo $_SESSION['prenom'] ?> disabled>
             </div>
             <div class="col-sm-3">
                 <label for="lastName" class="form-label">Nom</label>
-                <input type="text" class="form-control" name="lastName" value=<?php echo $_SESSION['nom']?> disabled>
+                <input type="text" class="form-control" name="lastName" value=<?php echo $_SESSION['nom'] ?> disabled>
             </div>
             <div class="col-sm-3">
                 <label for="username" class="form-label">Nom de jeune fille</label>
@@ -62,7 +64,7 @@ include_once('header.php');
             </div>
             <div class="col-sm-4">
                 <label for="firstName" class="form-label">E-mail</label>
-                <input type="email" class="form-control" name="mail"  value=<?php echo $_SESSION['mail']?> disabled>
+                <input type="email" class="form-control" name="mail" value=<?php echo $_SESSION['mail'] ?> disabled>
             </div>
             <div class="col-sm-4">
                 <label for="firstName" class="form-label">Tel</label>

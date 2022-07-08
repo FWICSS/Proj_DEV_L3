@@ -1,0 +1,1 @@
+<a href="index.php?useCase=admin&action=espaceAdmin" class="btn btn-info">Espace administrateur</a>

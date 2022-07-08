@@ -4,7 +4,7 @@ include_once('header.php');
 <div class="container">
     <div class="progress">
         <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar"
-             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+             aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">100%</div>
     </div>
 </div>
 <div class="container bg-white rounded-3 border border-5 shadow mt-3 ps-lg-5 pe-lg-5 pb-5">

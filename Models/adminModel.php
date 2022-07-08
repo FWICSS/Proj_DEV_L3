@@ -37,3 +37,13 @@ function getListeEtudiant()
     $ligne = $req->fetchAll();
     return $ligne;
 }
+
+function getEtudiant($id)
+{
+    global $database;
+    $query = "SELECT * FROM etudiant, adresse, diplome WHERE diplome.id ='$id' and etudiant.id ='$id' and adresse.id ='$id'";
+    $req = $database->prepare($query);
+    $req->execute();
+    $ligne = $req->fetchAll();
+    return $ligne;
+}

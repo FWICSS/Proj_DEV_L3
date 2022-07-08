@@ -8,22 +8,24 @@ include_once('header.php');
             echo('Bonjour, ' . $_SESSION['prenom'] . ' ' . $_SESSION['nom']); }?></h2>
     </div>
 
-    <div class="container">
+    <div class="container-fluids">
         <p>Le nombre de candidature à la formation L3 MIAGE est de <b> <?php if (isset($_SESSION['idAdmin'])){
             $nbetudiant = getNBEtudiant();
             $listeEtudiant = getListeEtudiant();
             echo $nbetudiant['NBEtudiant'];
             }?> candidatures.</b></p>
-
-        <h2>Sélectionner un étudiant : </h2>
-
+        <form>
         <?php
-        echo '<select class="form-select" aria-label="Default select example">';
-            echo  '<option selected>Sélectionnez un étudiant</option>';
+            echo '<select id="listeEtudiant" class="form-select" aria-label="Default select example" onchange="showUser(this.value)">';
+            echo  '<option selected>Sélectionnez un étudiant :</option>';
             foreach($listeEtudiant as $a)
             echo '<option value="'.$a["id"].'">'.$a["nom"].' '.$a["prenom"].'</option>';
             echo '</select>';
             ?>
+        </form>
+
+        <br>
+            <div id="txtHint"></div>
 
     </div>
 
