@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="debut fonction select pour pdf">
-      <change afterPath="$PROJECT_DIR$/Models/adminModel.php" afterDir="false" />
+    <list default="true" id="5d7b13f6-1bad-46d8-b454-84eddf7bcac1" name="Changes" comment="Ajout Admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Models/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/adminDashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminDashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/adminLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Views/adminLogin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657028379779</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Ajout Admin">
+      <created>1657242357948</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657242357948</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +225,7 @@
     <MESSAGE value="debut fonction pdf" />
     <MESSAGE value="debut fonction selectalladresse etudiant" />
     <MESSAGE value="debut fonction select pour pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="debut fonction select pour pdf" />
+    <MESSAGE value="Ajout Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout Admin" />
   </component>
 </project>
