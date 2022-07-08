@@ -49,11 +49,5 @@ stages en entreprises ?
         </textarea>
             <input type="date">
             <input type="file">
-
         </div>
     </form>
-
-
-<?php
-include('footer.php');
-?>

@@ -26,10 +26,10 @@ function addEmail($mail)
     $stmt->execute();
 }
 
-function getLogInInfosStudent($login, $password)
+function getLogInInfosStudent($login)
 {
     global $database;
-    $query = "SELECT etudiant.id, etudiant.nom, etudiant.prenom, adresse.mail as mail FROM etudiant INNER JOIN adresse ON etudiant.adr_id = adresse.id WHERE etudiant.login='$login' AND etudiant.password='$password'";
+    $query = "SELECT etudiant.id, etudiant.nom, etudiant.prenom, etudiant.password, adresse.mail as mail FROM etudiant INNER JOIN adresse ON etudiant.adr_id = adresse.id WHERE etudiant.login='$login'";
     $req = $database->prepare($query);
     $req->execute();
     $ligne = $req->fetch();
@@ -124,6 +124,34 @@ function SelectEtudiant()
     return $count;
 }
 
+function SelectDiplome_E()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT SERIE,INTITULE,MENTION,ANNEE,LIEU,MOYENNE 
+    FROM diplome INNER JOIN etudiant ON diplome.id_etudiant = etudiant.id WHERE etudiant.id '$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
+function E_Formation()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT * FROM formation WHERE id_etudiant = '$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
+function Stage_Entreprise()
+{
+    global $database;
+    $id = $_SESSION['idStudent'];
+    $query = "SELECT NOM,PROPOSITION_FERME,ANNEE,LIBELLE FROM theme INNER JOIN porter_sur ON porter_sur.theme_id = theme.id INNER JOIN stage ON porter_sur.stage_id = stage.id  INNER JOIN entreprise ON stage.ent_id = entreprise.id WHERE etu_id='$id'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
 
 
 

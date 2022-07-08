@@ -43,12 +43,13 @@ if (isset($_REQUEST['action'])) {
             if (isset($_REQUEST['login'], $_REQUEST['password'])) {
                 $login = $_REQUEST['login'];
                 $password = $_REQUEST['password'];
-                $student = getLogInInfosStudent($login, password_hash($password,PASSWORD_DEFAULT));
+                $student = getLogInInfosStudent($login);
+                $passwordHash = $student['password'];
                 if ($student == null) {
                     $message = "Login ou mot de passe incorrect";
                     include('Views\errorsMessages.php');
                     include_once('Views\login.php');
-                } else {
+                } else if (password_verify($password, $passwordHash) === true) {
                     $id = $student['id'];
                     $nom = $student['nom'];
                     $prenom = $student['prenom'];
@@ -106,7 +107,7 @@ if (isset($_REQUEST['action'])) {
             insertCycle($idStudent, $intitule_1, $annee_obtention_1, $place_1, $average_1);
             insertCycle($idStudent, $intitule_2, $annee_obtention_2, $place_2, $average_2);
             insertCycle($idStudent, $intitule_3, $annee_obtention_3, $place_3, $average_3);
-            include('Views\registerMiageForm5.php');
+            include('Views\questionnaire.php');
             break;
     }
 }
