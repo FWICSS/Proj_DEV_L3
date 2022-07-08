@@ -16,25 +16,13 @@ include_once('header.php');
             <div class="pt-5 text-start">
                 <h4>Avez vous candidaté à d’autres formations? </h4>
             </div>
-            <div class="col-sm-3">
-                <label for="firstName" class="form-label">Intitule</label>
-                <input type="text" class="form-control" name="intitule_1" required>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>Option 1
+                <label class="form-check-label" for="radio1"></label>
             </div>
-            <div class="col-sm-3">
-                <label for="firstName" class="form-label">Année d'obtention</label>
-                <input type="number" class="form-control" name="annee_obtention_1" required>
-            </div>
-            <div class="col-sm-3">
-                <label for="username" class="form-label">Lieu</label>
-                <div class="input-group has-validation">
-                    <input type="text" class="form-control" name="place_1" required>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <label for="username" class="form-label">Moyenne</label>
-                <div class="input-group has-validation">
-                    <input type="number" step="0.01" class="form-control" name="average_1" required>
-                </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">Option 2
+                <label class="form-check-label" for="radio2"></label>
             </div>
             <div class=" text-start">
                 <h4>2eme Année</h4>

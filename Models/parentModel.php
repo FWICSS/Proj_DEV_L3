@@ -15,22 +15,52 @@ function insertAdressParentInfos($lblParentAddress, $lblParentCity, $lblParentCo
     return $count;
 }
 
-function getIdAdressByParent($parentMail)
+function getIdAddress($parentMail)
 {
     global $database;
-    $query = "SELECT id FROM adresse WHERE mail ='$parentMail'";
-    $stmt = $database->query($query);
-    $count = $stmt->fetch();
+    $query = "SELECT id FROM adresse WHERE mail = '$parentMail' ";
+    $res = $database->query($query);
+    $count = $res->fetch();
     return $count;
 }
 
-function linkParentWithAddress($parentMail)
+function linkAddressWithParent($parentMail)
 {
     global $database;
-    $idAddress = getIdAdressByParent($parentMail);
-    $query = "INSERT INTO parent(ADR_ID) VALUES (:idAddress)";
+    $idAdr = getIdAddress($parentMail);
+    $id = $idAdr['id'];
+    $query = "INSERT INTO parent (adr_id) VALUE ($id) ";
     $stmt = $database->prepare($query);
-    $stmt->bindParam(':idAddress', $idAddress['id']);
     $count = $stmt->execute();
+    return $count;
+}
+
+function getIdParentByMail($parentMail)
+{
+    global $database;
+    $query = "SELECT parent.id as idP FROM parent INNER JOIN adresse ON parent.adr_id = adresse.id WHERE MAIL = '$parentMail'";
+    $res = $database->query($query);
+    $count = $res->fetch();
+    return $count;
+}
+
+function linkStudentWithParent($parentMail)
+{
+    global $database;
+    $idParent = getIdParentByMail($parentMail);
+    $idP = $idParent['idP'];
+    $query = "UPDATE etudiant SET parent_id = $idP WHERE id = :id";
+    $stmt = $database->prepare($query);
+    $stmt->bindParam(':id', $_SESSION['idStudent']);
+    $count = $stmt->execute();
+    return $count;
+}
+
+function emailExist($mail)
+{
+    global $database;
+    $query = "SELECT count(*) from adresse WHERE mail = '$mail'";
+    $res = $database->query($query);
+    $count = $res->fetchColumn();
     return $count;
 }

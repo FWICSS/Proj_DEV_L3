@@ -90,10 +90,6 @@ function insertBacDiplome($idStudent,$serie, $mention, $year, $place)
     return $count;
 }
 
-function linkStudentWithDiplome($id)
-{
-
-}
 
 
 function insertCycle($idStudent,$intitule,$annee_obtention,$place,$average){
